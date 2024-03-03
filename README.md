@@ -14,7 +14,7 @@ to interface with the LED panels, two [BTF-Lighting](https://www.amazon.de/-/en/
 5V 40A power supplies, and 9 [LysonLED](https://www.aliexpress.com/item/32382200566.html) LED panels.
 
 Firstly clone the git repository to the raspberry Pi, and afterwards run the following command in
-the top folder.
+the top folder:
 ```
 sudo make -C examples-api-use
 ```
@@ -32,3 +32,4 @@ Flags can be set while calling one of the examples, e.g the following snippet:
 ```
 sudo ./demo -D0 --led-slowdown-gpio=2 --led-multiplexing=1 --led-show-refresh 
 ```
+test
