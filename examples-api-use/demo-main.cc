@@ -1063,6 +1063,9 @@ int main(int argc, char *argv[]) {
   RGBMatrix::Options matrix_options;
   rgb_matrix::RuntimeOptions runtime_opt;
 
+  runtime_opt.gpio_slowdown = 2;
+  matrix_options.multiplexing = 1;
+
   // These are the defaults when no command-line flags are given.
   matrix_options.rows = 32;
   matrix_options.chain_length = 1;
