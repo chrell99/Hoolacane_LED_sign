@@ -22,10 +22,10 @@ Once done you can run one of the examples, by changing to the `examples-api-use`
 configuration is necessary. The modules from LysonLED need the following parameters set to function 
 properly:
 |Flag                    | Description |
-:---------------         | :-----------------
-|`--led-slowdown-gpio=2` | <span style="white-space: nowrap">Slowdown GPIO. Needed for faster raspberry Pis and/or slower panels. </span>|
-|`--led-multiplexing=1`  | <span style="white-space: nowrap">In particular bright outdoor panels with small multiplex ratios require this. Often an indicator: if there are fewer address lines than expected: ABC (instead of ABCD) for 32 high panels and ABCD (instead of ABCDE) for 64 high panels.</span>|
-|`--led-show-refresh`    | <span style="white-space: nowrap">Not necessary for the function of the LED panel, but a nice piece of information to have on the raspberry PI.</span>|
+:---------------         | :---------------
+|`--led-slowdown-gpio=2` | Slowdown GPIO. Needed for faster raspberry Pis and/or slower panels.|
+|`--led-multiplexing=1`  | In particular bright outdoor panels with small multiplex ratios require this. Often an indicator: if there are fewer address lines than expected: ABC (instead of ABCD) for 32 high panels and ABCD (instead of ABCDE) for 64 high panels.|
+|`--led-show-refresh`    | Not necessary for the function of the LED panel, but a nice piece of information to have on the raspberry PI|
 
 Flags can be set while calling one of the examples, e.g the following snippet:
 ```
