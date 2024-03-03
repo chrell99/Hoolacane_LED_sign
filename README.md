@@ -18,13 +18,16 @@ the top folder.
 ```
 sudo make -C examples-api-use
 ```
-Once done you can run one of the examples, but some configuration is necessary. The modules from
-LysonLED need the following parameters set to function properly:
+Once done you can run one of the examples, by changing to the `examples-api-use` folder, but some 
+configuration is necessary. The modules from LysonLED need the following parameters set to function 
+properly:
 Flag                    | Description
 :---------------        | :-----------------
-`--led-slowdown-gpio=2` | Columns in the LED matrix, the 'width'.
-`--led-multiplexing=1`  | Rows in the LED matrix, the 'height'.
+`--led-slowdown-gpio=2` | Slowdown GPIO. Needed for faster raspberry Pis and/or slower panels
+`--led-multiplexing=1`  | In particular bright outdoor panels with small multiplex ratios require this. Often an indicator: if there are fewer address lines than expected: ABC (instead of ABCD) for 32 high panels and ABCD (instead of ABCDE) for 64 high panels.
+`--led-show-refresh`    | Not necessary for the function of the LED panel, but a nice piece of information to have on the raspberry PI
 
+Flags can be set while calling one of the examples, e.g the following snippet:
 ```
---led-slowdown-gpio=2 --led-multiplexing=1 
+sudo ./demo -D0 --led-slowdown-gpio=2 --led-multiplexing=1 --led-show-refresh 
 ```
