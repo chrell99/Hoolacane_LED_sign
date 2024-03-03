@@ -23,8 +23,8 @@ configuration is necessary. The modules from LysonLED need the following paramet
 properly:
 
 |Flag                    | Description |
-|:-----------------------| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|`--led-slowdown-gpio=2` | Slowdown GPIO. Needed for faster raspberry Pis and/or slower panels.|
+|:-----------------------| :-------------------------|
+|<span style="white-space: nowrap">`--led-slowdown-gpio=2`</span> | Slowdown GPIO. Needed for faster raspberry Pis and/or slower panels.|
 |`--led-multiplexing=1`  | In particular bright outdoor panels with small multiplex ratios require this. Often an indicator: if there are fewer address lines than expected: ABC (instead of ABCD) for 32 high panels and ABCD (instead of ABCDE) for 64 high panels.|
 |`--led-show-refresh`    | Not necessary for the function of the LED panel, but a nice piece of information to have on the raspberry PI|
 
