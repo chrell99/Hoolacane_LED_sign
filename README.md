@@ -32,4 +32,16 @@ Flags can be set while calling one of the examples, e.g the following snippet:
 ```
 sudo ./demo -D0 --led-slowdown-gpio=2 --led-multiplexing=1 --led-show-refresh 
 ```
-test
+
+Connecting multiple modules
+---------------
+When connecting multiple modules a few flags have to be set in order for it to work properly, aswell as
+well as some physical configuration. On the Electrodragon board theres is a small switch on top of the
+board. Ensure this is set in the "P3 chain" state to allow 3 parallel chains.
+|Flag                    | Description |
+|:-----------------------| :-------------------------|
+|`--led-parallel=3` | Number of LED panels in parallel (How many individual lines are connected to the PI). |
+|`--led-chain=3`  | Number of LED panels in series. |
+|`--led-pixel-mapper="Rotate:90"`    | The rotation of the display in degrees. Has to be multiple of 90.|
+
+The settings depend on the sign but the above is what will work for this project. 
